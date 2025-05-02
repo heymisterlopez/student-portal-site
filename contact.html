@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body id="top">
+  <header>
+    <nav>
+      <div class="logo">MySite</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="students.html">Students</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" data-aos="fade-up">
+    <h1>Contact Me</h1>
+    <p>Have a question or need help? Send me a message!</p>
+  </section>
+
+  <section class="contact-form" data-aos="fade-up">
+    <form id="contactForm" action="https://formspree.io/f/xpwdpdle" method="POST">
+      <label for="name"><i class="fas fa-user"></i> Name:</label>
+      <input type="text" id="name" name="name" required>
+      <small class="error-message" id="name-error"></small>
+
+      <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+      <input type="email" id="email" name="email" required>
+      <small class="error-message" id="email-error"></small>
+
+      <label for="message"><i class="fas fa-comment-dots"></i> Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      <small class="error-message" id="message-error"></small>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MySite. All rights reserved.</p>
+  </footer>
+
+  <button id="scrollToTopBtn" title="Go to top">⬆️</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
