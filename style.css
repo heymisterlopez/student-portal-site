@@ -1,345 +1,148 @@
-/* Base styles */
-body {
+   body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #ffffff;
     color: #333333;
-    opacity: 0;
-    transition: opacity 1s ease-in;
-}
-
-body.loaded {
-    opacity: 1;
-}
-
-/* Navigation styles */
-header {
-    background-color: #1E90FF; /* Dodger Blue */
+  }
+  
+  /* Header / Nav */
+  header {
+    background-color: #673D86; /* Deep Purple */
     padding: 10px 20px;
-}
-
-nav {
+  }
+  
+  nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-html {
-    scroll-behavior: smooth;
-  }  
-
-.logo {
+  }
+  
+  .logo {
     font-size: 24px;
     font-weight: bold;
     color: #ffffff;
-}
-
-.nav-links {
+  }
+  
+  .nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
-}
-
-.nav-links li a {
+  }
+  
+  .nav-links li a {
     text-decoration: none;
     color: #ffffff;
     font-weight: 500;
     position: relative;
-}
-
-.nav-links li a::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: #FFD700; /* Gold */
-    left: 0;
-    bottom: -5px;
-    transition: width 0.3s;
-}
-
-.nav-links li a:hover::after {
-    width: 100%;
-}
-
-/* Hero section */
-.hero {
+  }
+  
+  .nav-links li a:hover {
+    color: #EFAA8C; /* Soft Peach */
+  }
+  
+  /* Hero Section */
+  .hero {
     text-align: center;
     padding: 100px 20px;
-    background-color: #32CD32; /* Lime Green */
-    color: #ffffff;
-}
-
-.hero h1 {
+    background-color: #EAD5A6; /* Pale Yellow */
+    color: #673D86;
+  }
+  
+  .hero h1 {
     font-size: 48px;
     margin-bottom: 20px;
-}
-
-.hero p {
+  }
+  
+  .hero p {
     font-size: 20px;
     margin-bottom: 30px;
-}
-
-.button {
+  }
+  
+  .button {
     text-decoration: none;
-    background-color: #FFD700; /* Gold */
-    color: #333333;
+    background-color: #E98887; /* Coral */
+    color: #ffffff;
     padding: 15px 30px;
     border-radius: 5px;
     font-weight: bold;
-}
-
-.button:hover {
-    background-color: #1E90FF; /* Dodger Blue */
+  }
+  
+  .button:hover {
+    background-color: #673D86;
     color: #ffffff;
-}
-
-/* Footer styles */
-footer {
-    background-color: #1E90FF; /* Dodger Blue */
+  }
+  
+  /* Card Section */
+  .card-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .card {
+    background-color: #ffffff;
+    border: 2px solid #96C498; /* Mint Green */
+    border-radius: 8px;
+    padding: 20px;
+    width: 260px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card h2 {
+    color: #70B0B7; /* Teal */
+  }
+  
+  .card a {
+    color: #E98887;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #70B0B7;
     color: #ffffff;
     text-align: center;
     padding: 15px 0;
-    margin-top: 50px;
-}
-
-/* Contact Form Styles */
-.contact-form {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #f5f5f5;
-    border-radius: 8px;
-}
-
-.contact-form form {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-form label {
-    margin-top: 10px;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 10px;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.contact-form button {
-    margin-top: 20px;
-    padding: 12px;
-    background-color: #FFD700; /* Gold */
-    color: #333333;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.contact-form button:hover {
-    background-color: #1E90FF; /* Dodger Blue */
-    color: #ffffff;
-}
-
-/* Bounce Animation for Specific Buttons */
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
-    }
-    40% {
-      transform: translateY(-8px);
-    }
-    60% {
-      transform: translateY(-4px);
-    }
-}
-
-/* You can apply bounce only to specific important buttons if you want */
-.button:hover {
-    animation: bounce 1s;
-}
-
-/* Error message styling */
-.error-message {
-    color: red;
     font-size: 14px;
-    height: 18px;
-    margin-top: 5px;
-}
-
-/* Card Section */
-.card-section {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    padding: 50px 20px;
-    background-color: #f5f5f5;
-}
-
-.card {
-    background-color: #ffffff;
-    border: 1px solid #cccccc;
-    border-radius: 8px;
-    padding: 20px;
-    width: 260px; /* was 300px */
-    text-align: center;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.card h2 {
-    margin-bottom: 10px;
-    color: #1E90FF; /* Dodger Blue */
-}
-
-.card p {
-    margin-bottom: 20px;
-    color: #333333;
-}
-
-.card a {
-    text-decoration: none;
-    color: #FFD700; /* Gold */
-    font-weight: bold;
-}
-
-.card:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    transform: scale(1.05) rotate(-1deg);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-/* Scroll to Top Button */
-#scrollToTopBtn {
-    display: none; /* Hidden by default */
+  }
+  
+  /* Scroll to Top */
+  #scrollToTopBtn {
+    display: none;
     position: fixed;
     bottom: 40px;
     right: 40px;
-    z-index: 99;
-    font-size: 18px;
-    background-color: #1E90FF;
+    background-color: #EFAA8C;
     color: white;
     border: none;
-    outline: none;
-    padding: 15px;
+    padding: 10px 15px;
     border-radius: 50%;
+    font-size: 16px;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-#scrollToTopBtn:hover {
-    background-color: #FFD700;
-    color: #333333;
-    transform: scale(1.1);
-}
-
-.back-to-top {
-    text-align: center;
-    margin-top: 30px;
+  }
+  
+  #scrollToTopBtn:hover {
+    background-color: #E98887;
   }
   
   .back-to-top a {
-    text-decoration: none;
+    color: #673D86;
     font-weight: bold;
-    color: #1E90FF;
-    font-size: 18px;
-    transition: color 0.3s;
+    text-decoration: none;
   }
   
   .back-to-top a:hover {
-    color: #FFD700;
-  }
-
-/* ------------------------ */
-/* 🎯 Responsive Design Section */
-/* ------------------------ */
-
-/* Small tablets and large phones (width 768px and below) */
-@media (max-width: 768px) {
-    .nav-links {
-      gap: 10px;
-      font-size: 14px;
-    }
-  
-    .hero h1 {
-      font-size: 36px;
-    }
-  
-    .hero p {
-      font-size: 18px;
-    }
-  
-    .button {
-      padding: 12px 24px;
-      font-size: 16px;
-    }
-  
-    .card-section {
-      flex-direction: column;
-      align-items: center;
-      padding: 30px 10px;
-    }
-  
-    .card {
-      width: 90%;
-      max-width: 400px;
-    }
-  
-    footer {
-      font-size: 14px;
-      padding: 10px 0;
-    }
+    color: #E98887;
   }
   
-  /* Very small devices (phones below 480px) */
-  @media (max-width: 480px) {
-    .hero h1 {
-      font-size: 28px;
-    }
-  
-    .hero p {
-      font-size: 16px;
-    }
-  
-    .logo {
-      font-size: 20px;
-    }
-  
-    .nav-links {
-      flex-direction: column;
-      align-items: center;
-      gap: 5px;
-    }
-  
-    .contact-form {
-      margin: 30px 10px;
-      padding: 15px;
-    }
-  
-    .contact-form input,
-    .contact-form textarea {
-      font-size: 14px;
-    }
-  
-    .contact-form button {
-      font-size: 16px;
-      padding: 10px;
-    }
-  
-    #scrollToTopBtn {
-      bottom: 20px;
-      right: 20px;
-      padding: 10px;
-      font-size: 16px;
-    }
-  }
-    
