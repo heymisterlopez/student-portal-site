@@ -105,3 +105,51 @@ document.addEventListener("DOMContentLoaded", () => {
   const mascotImg = document.querySelector('.character-float');
   if (mascotImg) mascotImg.src = chosenMascot;
 });
+
+
+// Mascot tips logic
+const mascotTips = [
+  "Did you drink water today? Stay hydrated!",
+  "Click on 'Students' to see cool learning stuff!",
+  "Remember: It's okay to ask for help!",
+  "Check the 'Resources' tab for fun math games!",
+  "You are doing great — keep going!"
+];
+
+const mascot = document.getElementById('mascot');
+const mascotTip = document.getElementById('mascotTip');
+
+if (mascot && mascotTip) {
+  mascot.addEventListener('click', () => {
+    const randomTip = mascotTips[Math.floor(Math.random() * mascotTips.length)];
+    mascotTip.textContent = randomTip;
+    mascotTip.style.opacity = 1;
+
+    // Auto-hide after 4 seconds
+    setTimeout(() => {
+      mascotTip.style.opacity = 0;
+    }, 4000);
+  });
+}
+
+window.addEventListener('load', () => {
+  const mascotTip = document.getElementById('mascotTip');
+  if (mascotTip) {
+    const messages = [
+      "Hi there! Ready to learn something fun today?",
+      "Let's grow our brains together! 📚✨",
+      "You're doing amazing—let's keep it up!",
+      "Learning is an adventure, and you're the hero!",
+      "Time to shine, superstar learner! 🌟",
+      "New day, new knowledge! Let's go!"
+    ];
+
+    const randomMsg = messages[Math.floor(Math.random() * messages.length)];
+    mascotTip.textContent = randomMsg;
+    mascotTip.style.opacity = 1;
+
+    setTimeout(() => {
+      mascotTip.style.opacity = 0;
+    }, 5000);
+  }
+});

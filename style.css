@@ -173,3 +173,77 @@ footer {
 .back-to-top a:hover {
   color: #E98887;
 }
+
+.mascot-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 999;
+}
+
+.character-float {
+  width: 80px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.character-float:hover {
+  transform: scale(1.1);
+}
+
+.speech-bubble {
+  position: absolute;
+  bottom: 90px;
+  left: 0;
+  background-color: #fff;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.mascot-container:hover .speech-bubble {
+  opacity: 1;
+}
+
+
+@keyframes blinkEyes {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    transform: scaleY(1);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: scaleY(0.1);
+  }
+}
+
+/* Apply blinking only to mascot image */
+.character-float {
+  width: 80px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s;
+  animation: blinkEyes 6s infinite;
+  transform-origin: center center;
+}
+
+.mascot-bubble {
+  position: fixed;
+  bottom: 140px;
+  right: 100px;
+  background-color: #ffffff;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  font-size: 0.9rem;
+  max-width: 220px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 10;
+}
