@@ -195,3 +195,59 @@ footer {
 .mascot-container:hover .mascot-bubble {
   opacity: 1;
 }
+
+.contact-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 45%;
+}
+
+.form-group.full-width {
+  flex: 1 1 100%;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #673D86;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: 'Quicksand', sans-serif;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #70B0B7;
+  outline: none;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+form .button {
+  margin-top: 10px;
+  padding: 12px 25px;
+  font-size: 1rem;
+}

@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Me</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body id="top">
   <header>
     <nav>
-      <div class="logo">MySite</div>
+      <div class="logo">
+        <img src="images/mascot.png" alt="Site Mascot" />
+        MySite
+      </div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="students.html">Students</a></li>
@@ -21,26 +22,32 @@
     </nav>
   </header>
 
-  <section class="hero" data-aos="fade-up">
+  <section class="hero">
     <h1>Contact Me</h1>
     <p>Have a question or need help? Send me a message!</p>
   </section>
 
-  <section class="contact-form" data-aos="fade-up">
+  <section class="contact-section">
     <form id="contactForm" action="https://formspree.io/f/xpwdpdle" method="POST">
-      <label for="name"><i class="fas fa-user"></i> Name:</label>
-      <input type="text" id="name" name="name" required>
-      <small class="error-message" id="name-error"></small>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" />
+        <span class="error-message" id="name-error"></span>
+      </div>
 
-      <label for="email"><i class="fas fa-envelope"></i> Email:</label>
-      <input type="email" id="email" name="email" required>
-      <small class="error-message" id="email-error"></small>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" />
+        <span class="error-message" id="email-error"></span>
+      </div>
 
-      <label for="message"><i class="fas fa-comment-dots"></i> Message:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-      <small class="error-message" id="message-error"></small>
+      <div class="form-group full-width">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+        <span class="error-message" id="message-error"></span>
+      </div>
 
-      <button type="submit">Send Message</button>
+      <button type="submit" class="button">Send Message</button>
     </form>
   </section>
 
@@ -49,8 +56,6 @@
   </footer>
 
   <button id="scrollToTopBtn" title="Go to top">⬆️</button>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
