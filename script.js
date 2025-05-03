@@ -170,3 +170,19 @@ window.addEventListener('load', () => {
     }, 5000);
   }
 });
+
+// Blink animation using layered eyelid image
+function blinkMascotEyes() {
+  const eyes = document.getElementById('mascot-eyes');
+  if (!eyes) return;
+
+  eyes.style.opacity = 1;
+  setTimeout(() => {
+    eyes.style.opacity = 0;
+  }, 200); // eyelid stays for 200ms
+}
+
+// Start blinking every few seconds
+setInterval(() => {
+  blinkMascotEyes();
+}, 5000 + Math.random() * 3000); // blink every 5–8s randomly
