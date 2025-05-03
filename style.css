@@ -55,20 +55,6 @@ nav {
   color: #EFAA8C;
 }
 
-/* Floating Character */
-.character-float {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  width: 80px;
-  height: auto;
-  z-index: 99;
-}
-
-.character-float:hover {
-  transform: scale(1.05);
-}
-
 /* Hero Section */
 .hero {
   text-align: center;
@@ -174,6 +160,7 @@ footer {
   color: #E98887;
 }
 
+/* Mascot Container */
 .mascot-container {
   position: fixed;
   bottom: 20px;
@@ -181,17 +168,26 @@ footer {
   z-index: 999;
 }
 
+/* Mascot Image */
 .character-float {
   width: 80px;
   height: auto;
   cursor: pointer;
   transition: transform 0.2s;
+  animation: blink 5s infinite;
 }
 
-.character-float:hover {
-  transform: scale(1.1);
+/* Mascot Blink Animation */
+@keyframes blink {
+  0%, 97%, 100% {
+    opacity: 1;
+  }
+  98%, 99% {
+    opacity: 0.1;
+  }
 }
 
+/* Speech Bubble */
 .speech-bubble {
   position: absolute;
   bottom: 90px;
@@ -212,30 +208,11 @@ footer {
   opacity: 1;
 }
 
-
-@keyframes blinkEyes {
-  0%, 20%, 40%, 60%, 80%, 100% {
-    transform: scaleY(1);
-  }
-  10%, 30%, 50%, 70%, 90% {
-    transform: scaleY(0.1);
-  }
-}
-
-/* Apply blinking only to mascot image */
-.character-float {
-  width: 80px;
-  height: auto;
-  cursor: pointer;
-  transition: transform 0.2s;
-  animation: blinkEyes 6s infinite;
-  transform-origin: center center;
-}
-
+/* Welcome Bubble on Load */
 .mascot-bubble {
   position: fixed;
   bottom: 140px;
-  right: 100px;
+  left: 100px;
   background-color: #ffffff;
   color: #333;
   padding: 10px 15px;
@@ -246,4 +223,28 @@ footer {
   opacity: 0;
   transition: opacity 0.5s ease;
   z-index: 10;
+}
+
+.eyes-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: auto;
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes mascotTalk {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.talking {
+  animation: mascotTalk 0.5s ease;
 }

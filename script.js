@@ -106,6 +106,21 @@ document.addEventListener("DOMContentLoaded", () => {
   if (mascotImg) mascotImg.src = chosenMascot;
 });
 
+const eyeOverlay = document.getElementById('mascot-eyes');
+
+function blinkEyes() {
+  if (!eyeOverlay) return;
+  eyeOverlay.style.opacity = 1;
+  setTimeout(() => {
+    eyeOverlay.style.opacity = 0;
+  }, 120);
+}
+
+// Blink every few seconds randomly
+setInterval(() => {
+  blinkEyes();
+}, Math.floor(Math.random() * 6000) + 3000); // Every 3–9 sec
+
 
 // Mascot tips logic
 const mascotTips = [
@@ -121,15 +136,17 @@ const mascotTip = document.getElementById('mascotTip');
 
 if (mascot && mascotTip) {
   mascot.addEventListener('click', () => {
-    const randomTip = mascotTips[Math.floor(Math.random() * mascotTips.length)];
-    mascotTip.textContent = randomTip;
-    mascotTip.style.opacity = 1;
+  const randomTip = mascotTips[Math.floor(Math.random() * mascotTips.length)];
+  mascotTip.textContent = randomTip;
+  mascotTip.style.opacity = 1;
 
-    // Auto-hide after 4 seconds
-    setTimeout(() => {
-      mascotTip.style.opacity = 0;
-    }, 4000);
-  });
+  mascot.classList.add('talking');
+  setTimeout(() => mascot.classList.remove('talking'), 500);
+
+  setTimeout(() => {
+    mascotTip.style.opacity = 0;
+  }, 4000);
+});
 }
 
 window.addEventListener('load', () => {
