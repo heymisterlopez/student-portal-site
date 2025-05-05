@@ -1,4 +1,4 @@
-// AOS
+// AOS (Animate on Scroll)
 document.addEventListener('DOMContentLoaded', () => {
   AOS?.init({ duration: 1000, once: true });
 
@@ -20,7 +20,7 @@ window.onscroll = () => {
   scrollToTopBtn.style.display =
     document.documentElement.scrollTop > 200 ? 'block' : 'none';
 };
-scrollToTopBtn.addEventListener('click', () => {
+scrollToTopBtn?.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
@@ -35,7 +35,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor =>
   })
 );
 
-// Mascot blinking
+// Mascot blinking eyes
 function blinkMascotEyes() {
   const eyes = document.getElementById('mascot-eyes');
   if (!eyes) return;
@@ -44,7 +44,7 @@ function blinkMascotEyes() {
 }
 setInterval(blinkMascotEyes, 5000 + Math.random() * 3000);
 
-// Mascot welcome message
+// Mascot welcome tip
 window.addEventListener('load', () => {
   const mascotTip = document.getElementById('mascotTip');
   if (mascotTip) {
@@ -62,7 +62,7 @@ window.addEventListener('load', () => {
   }
 });
 
-// Mascot click tip
+// Mascot click message
 const mascot = document.getElementById('mascot');
 const mascotTip = document.getElementById('mascotTip');
 if (mascot && mascotTip) {
@@ -82,14 +82,67 @@ if (mascot && mascotTip) {
   });
 }
 
-// ✅ Dark Mode toggle
+// Dark mode toggle
 const toggle = document.getElementById('themeToggle');
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 if (toggle) {
   toggle.checked = prefersDark;
   if (prefersDark) document.body.classList.add('dark-mode');
-
   toggle.addEventListener('change', () => {
     document.body.classList.toggle('dark-mode', toggle.checked);
+  });
+}
+
+// ✅ Contact Form Logic (Validation + Thank You)
+const contactForm = document.getElementById('contactForm');
+const thankYouMessage = document.getElementById('thankYouMessage');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Clear previous errors
+    document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+
+    const name = contactForm.name.value.trim();
+    const email = contactForm.email.value.trim();
+    const message = contactForm.message.value.trim();
+
+    let hasError = false;
+
+    if (!name) {
+      document.getElementById('name-error').textContent = 'Please enter your name.';
+      hasError = true;
+    }
+
+    if (!email || !email.includes('@')) {
+      document.getElementById('email-error').textContent = 'Please enter a valid email.';
+      hasError = true;
+    }
+
+    if (!message) {
+      document.getElementById('message-error').textContent = 'Please enter a message.';
+      hasError = true;
+    }
+
+    if (hasError) return;
+
+    // Submit to Formspree
+    fetch(contactForm.action, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, message })
+    })
+      .then(res => {
+        if (res.ok) {
+          contactForm.style.display = 'none';
+          if (thankYouMessage) thankYouMessage.style.display = 'block';
+        } else {
+          alert('Oops! Something went wrong. Please try again later.');
+        }
+      })
+      .catch(() => {
+        alert('There was an error submitting the form.');
+      });
   });
 }
