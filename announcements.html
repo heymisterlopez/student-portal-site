@@ -20,6 +20,10 @@
         <li><a href="resources.html">Resources</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+      <label class="theme-toggle">
+        <input type="checkbox" id="themeToggle" />
+        <span class="slider"></span>
+      </label>
     </nav>
   </header>
 
@@ -45,17 +49,20 @@
     </div>
   </section>
 
-  <div class="back-to-top">
-    <a href="#top">⬆️ Back to Top</a>
-  </div>
+  <div class="back-to-top"><a href="#top">⬆️ Back to Top</a></div>
 
   <footer>
     <p>&copy; 2025 MySite. All rights reserved.</p>
   </footer>
 
-  <img src="images/mascot.png" alt="Mascot Assistant" class="character-float" />
-  <button id="scrollToTopBtn" title="Go to top">⬆️</button>
+  <div class="mascot-container">
+    <img id="mascot" src="images/mascot1.png" alt="Mascot Assistant" class="character-float" />
+    <img id="mascot-eyes" src="images/mascot-eyes.png" alt="Mascot Eyes" class="mascot-eyes" />
+    <div id="mascotTip" class="mascot-bubble">Hi there! Ready to learn something fun today?</div>
+    <div class="speech-bubble" id="speechBubble">Hi there! Need help?</div>
+  </div>
 
+  <button id="scrollToTopBtn" title="Go to top">⬆️</button>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="script.js"></script>
 </body>

@@ -6,7 +6,7 @@
   <title>Contact Me</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
+<body id="top" class="contact-page">
   <header>
     <nav>
       <div class="logo">
@@ -19,39 +19,51 @@
         <li><a href="resources.html">Resources</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+      <label class="theme-toggle">
+        <input type="checkbox" id="themeToggle" />
+        <span class="slider"></span>
+      </label>
     </nav>
   </header>
 
-  <body id="top" class="contact-page">
-    ...
-    <section class="hero">
-      <h1>Contact Me</h1>
-      <p>Have a question or need help? Send me a message!</p>
-    </section>
+  <section class="hero">
+    <h1>Contact Me</h1>
+    <p>Have a question or need help? Send me a message!</p>
+  </section>
 
-    <!-- ✅ Styled Contact Form -->
-    <section class="contact-form-wrapper">
-      <form class="contact-form" id="contactForm" action="https://formspree.io/f/xpwdpdle" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
-        <span class="error-message" id="name-error"></span>
-  
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-        <span class="error-message" id="email-error"></span>
-  
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-        <span class="error-message" id="message-error"></span>
-  
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-  
+  <!-- ✅ Contact Form -->
+  <section class="contact-form-wrapper">
+    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xpwdpdle" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+      <span class="error-message" id="name-error"></span>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+      <span class="error-message" id="email-error"></span>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      <span class="error-message" id="message-error"></span>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div id="thankYouMessage" class="thank-you-message" style="display: none;">
+      <p>✅ Thanks for your message! I'll get back to you soon.</p>
+    </div>
+  </section>
 
   <footer>
     <p>&copy; 2025 MySite. All rights reserved.</p>
   </footer>
+
+  <div class="mascot-container">
+    <img id="mascot" src="images/mascot1.png" alt="Mascot Assistant" class="character-float" />
+    <img id="mascot-eyes" src="images/mascot-eyes.png" alt="Mascot Eyes" class="mascot-eyes" />
+    <div id="mascotTip" class="mascot-bubble">Hi there! Ready to learn something fun today?</div>
+    <div class="speech-bubble" id="speechBubble">Hi there! Need help?</div>
+  </div>
 
   <button id="scrollToTopBtn" title="Go to top">⬆️</button>
   <script src="script.js"></script>
