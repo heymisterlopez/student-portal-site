@@ -1,5 +1,5 @@
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
-@import url('variables.css');
 
 body {
   margin: 0;
@@ -54,272 +54,272 @@ nav {
 
 /* Theme Toggle */
 .theme-toggle {
-    margin-left: 20px;
-    position: relative;
-    width: 50px;
-    height: 26px;
-  }
-  
-  .theme-toggle input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: #ccc;
-    transition: 0.4s;
-    border-radius: 50px;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 20px; width: 20px;
-    left: 3px; bottom: 3px;
-    background-color: white;
-    transition: 0.4s;
-    border-radius: 50%;
-  }
-  
-  input:checked + .slider {
-    background-color: var(--accent-color);
-  }
-  
-  input:checked + .slider:before {
-    transform: translateX(24px);
-  }
-  
-  /* Hero Section */
-  .hero {
-    text-align: center;
-    padding: 100px 20px;
-    background-color: #EAD5A6;
-    color: var(--primary-color);
-  }
-  
-  .hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-  }
-  
-  .hero p {
-    font-size: 20px;
-    margin-bottom: 30px;
-  }
-  
-  /* Button */
-  .button {
-    text-decoration: none;
-    background-color: var(--accent-color);
-    color: #ffffff;
-    padding: 15px 30px;
-    border-radius: 5px;
-    font-weight: bold;
-  }
-  
-  .button:hover {
-    background-color: var(--primary-color);
-  }
-  
-  /* Cards */
-  .card-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    padding: 50px 20px;
-    background-color: #f9f9f9;
-  }
-  
-  body.dark-mode .card-section {
-    background-color: #222;
-  }
-  
-  .card {
-    background-color: var(--card-color);
-    border: 2px solid #96C498;
-    border-radius: 8px;
-    padding: 20px;
-    width: 260px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .card h2 {
-    color: #70B0B7;
-  }
-  
-  .card a {
-    color: var(--accent-color);
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* Contact Form */
-  .contact-form-wrapper {
-    padding: 40px 20px 60px;
-    display: flex;
-    justify-content: center;
-    background-color: var(--bg-color);
-  }
-  
-  .contact-form {
-    max-width: 600px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .contact-form label {
-    font-weight: bold;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid var(--input-border);
-    border-radius: 4px;
-    background-color: var(--input-bg);
-    color: var(--text-color);
-    font-family: 'Quicksand', sans-serif;
-  }
-  
-  .contact-form textarea {
-    min-height: 120px;
-    resize: vertical;
-  }
-  
-  .contact-form button {
-    background-color: var(--accent-color);
-    color: #fff;
-    border: none;
-    padding: 12px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .contact-form button:hover {
-    background-color: var(--primary-color);
-  }
-  
-  .error-message {
-    color: red;
-    font-size: 0.8em;
-    height: 1em;
-  }
-  
-  /* Footer */
-  footer {
-    background-color: var(--footer-color);
-    color: #ffffff;
-    text-align: center;
-    padding: 20px 10px;
-    font-size: 14px;
-  }
-  
-  /* Scroll to Top */
-  #scrollToTopBtn {
-    display: none;
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    background-color: var(--secondary-color);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 50%;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  #scrollToTopBtn:hover {
-    background-color: var(--accent-color);
-  }
-  
-  .back-to-top a {
-    color: var(--primary-color);
-    font-weight: bold;
-    text-decoration: none;
-  }
-  
-  /* Mascot & Speech Bubbles */
-  .mascot-container {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 999;
-  }
-  
-  .character-float {
-    width: 80px;
-    cursor: pointer;
-    transition: transform 0.2s;
-  }
-  
-  .mascot-eyes {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 80px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.1s ease-in-out;
-  }
-  
-  .speech-bubble {
-    position: absolute;
-    bottom: 90px;
-    left: 0;
-    background-color: var(--bubble-bg);
-    color: var(--text-color);
-    padding: 10px 15px;
-    border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    font-size: 0.9rem;
-    opacity: 0;
-    transition: opacity 0.3s;
-    pointer-events: none;
-  }
-  
-  .mascot-container:hover .speech-bubble {
-    opacity: 1;
-  }
-  
-  .mascot-bubble {
-    position: fixed;
-    bottom: 140px;
-    left: 100px;
-    background-color: var(--bubble-bg);
-    color: var(--text-color);
-    padding: 10px 15px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    font-size: 0.9rem;
-    max-width: 220px;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    z-index: 10;
-  }
-  
-  .talking {
-    animation: mascotTalk 0.5s ease;
-  }
-  
-  @keyframes mascotTalk {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-4px); }
-  }
-  
+  margin-left: 20px;
+  position: relative;
+  width: 50px;
+  height: 26px;
+}
+
+.theme-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px; width: 20px;
+  left: 3px; bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--accent-color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #EAD5A6;
+  color: var(--primary-color);
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+/* Button */
+.button {
+  text-decoration: none;
+  background-color: var(--accent-color);
+  color: #ffffff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: var(--primary-color);
+}
+
+/* Cards */
+.card-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+body.dark-mode .card-section {
+  background-color: #222;
+}
+
+.card {
+  background-color: var(--card-color);
+  border: 2px solid #96C498;
+  border-radius: 8px;
+  padding: 20px;
+  width: 260px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h2 {
+  color: #70B0B7;
+}
+
+.card a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Contact Form */
+.contact-form-wrapper {
+  padding: 40px 20px 60px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg-color);
+}
+
+.contact-form {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  font-family: 'Quicksand', sans-serif;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form button {
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: var(--primary-color);
+}
+
+/* Error messages */
+.error-message {
+  color: red;
+  font-size: 0.8em;
+  height: 1em;
+}
+
+/* Footer */
+footer {
+  background-color: var(--footer-color);
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+}
+
+/* Scroll to Top */
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#scrollToTopBtn:hover {
+  background-color: var(--accent-color);
+}
+
+.back-to-top a {
+  color: var(--primary-color);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Mascot & Speech Bubbles */
+.mascot-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 999;
+}
+
+.character-float {
+  width: 80px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.mascot-eyes {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.speech-bubble {
+  position: absolute;
+  bottom: 90px;
+  left: 0;
+  background-color: var(--bubble-bg);
+  color: var(--text-color);
+  padding: 10px 15px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.mascot-container:hover .speech-bubble {
+  opacity: 1;
+}
+
+.mascot-bubble {
+  position: fixed;
+  bottom: 140px;
+  left: 100px;
+  background-color: var(--bubble-bg);
+  color: var(--text-color);
+  padding: 10px 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  font-size: 0.9rem;
+  max-width: 220px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 10;
+}
+
+.talking {
+  animation: mascotTalk 0.5s ease;
+}
+
+@keyframes mascotTalk {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
