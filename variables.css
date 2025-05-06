@@ -1,25 +1,27 @@
+/* Light Mode Variables */
 :root {
   --bg-color: #ffffff;
-  --text-color: #333333;
-  --primary-color: #673D86;
-  --secondary-color: #EFAA8C;
-  --accent-color: #E98887;
-  --card-color: #ffffff;
-  --footer-color: #70B0B7;
-  --bubble-bg: #ffffff;
+  --text-color: #1e1e1e;
+  --primary-color: #7B5CFF;       /* Purple */
+  --secondary-color: #70B0B7;     /* Mint blue */
+  --accent-color: #FF8D8D;        /* Coral red */
+  --card-color: #fff7ea;          /* Peachy pastel */
+  --footer-color: #7B5CFF;
+  --bubble-bg: #e0f7fa;           /* Light mint bubble */
   --input-bg: #ffffff;
   --input-border: #cccccc;
 }
 
+/* Dark Mode Overrides */
 body.dark-mode {
-  --bg-color: #1c1c1c;
-  --text-color: #f0f0f0;
-  --primary-color: #4c2a63;
-  --secondary-color: #db927f;
-  --accent-color: #c86f6e;
-  --card-color: #2a2a2a;
-  --footer-color: #3c8d95;
-  --bubble-bg: #333333;
-  --input-bg: #2a2a2a;
-  --input-border: #555555;
+  --bg-color: #1c1c1e;
+  --text-color: #f1f1f1;
+  --primary-color: #b28dff;       /* Softer purple */
+  --secondary-color: #70B0B7;
+  --accent-color: #ffb6b6;        /* Light coral */
+  --card-color: #2a2a2c;
+  --footer-color: #2a2a2c;
+  --bubble-bg: #333c3c;
+  --input-bg: #333;
+  --input-border: #555;
 }

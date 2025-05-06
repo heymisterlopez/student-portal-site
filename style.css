@@ -1,4 +1,4 @@
-/* Google Fonts */
+/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
 
 body {
@@ -10,7 +10,7 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Header / Nav */
+/* Header */
 header {
   background-color: var(--primary-color);
   padding: 10px 20px;
@@ -93,38 +93,6 @@ input:checked + .slider:before {
   transform: translateX(24px);
 }
 
-/* Hero Section */
-.hero {
-  text-align: center;
-  padding: 100px 20px;
-  background-color: #EAD5A6;
-  color: var(--primary-color);
-}
-
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 20px;
-  margin-bottom: 30px;
-}
-
-/* Button */
-.button {
-  text-decoration: none;
-  background-color: var(--accent-color);
-  color: #ffffff;
-  padding: 15px 30px;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.button:hover {
-  background-color: var(--primary-color);
-}
-
 /* Cards */
 .card-section {
   display: flex;
@@ -164,99 +132,7 @@ body.dark-mode .card-section {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* Contact Form */
-.contact-form-wrapper {
-  padding: 40px 20px 60px;
-  display: flex;
-  justify-content: center;
-  background-color: var(--bg-color);
-}
-
-.contact-form {
-  max-width: 600px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.contact-form label {
-  font-weight: bold;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid var(--input-border);
-  border-radius: 4px;
-  background-color: var(--input-bg);
-  color: var(--text-color);
-  font-family: 'Quicksand', sans-serif;
-}
-
-.contact-form textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-.contact-form button {
-  background-color: var(--accent-color);
-  color: #fff;
-  border: none;
-  padding: 12px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.contact-form button:hover {
-  background-color: var(--primary-color);
-}
-
-/* Error messages */
-.error-message {
-  color: red;
-  font-size: 0.8em;
-  height: 1em;
-}
-
-/* Footer */
-footer {
-  background-color: var(--footer-color);
-  color: #ffffff;
-  text-align: center;
-  padding: 20px 10px;
-  font-size: 14px;
-}
-
-/* Scroll to Top */
-#scrollToTopBtn {
-  display: none;
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  background-color: var(--secondary-color);
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 50%;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-#scrollToTopBtn:hover {
-  background-color: var(--accent-color);
-}
-
-.back-to-top a {
-  color: var(--primary-color);
-  font-weight: bold;
-  text-decoration: none;
-}
-
-/* Mascot & Speech Bubbles */
+/* Mascot */
 .mascot-container {
   position: fixed;
   bottom: 20px;
@@ -267,36 +143,6 @@ footer {
 .character-float {
   width: 80px;
   cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.mascot-eyes {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 80px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.1s ease-in-out;
-}
-
-.speech-bubble {
-  position: absolute;
-  bottom: 90px;
-  left: 0;
-  background-color: var(--bubble-bg);
-  color: var(--text-color);
-  padding: 10px 15px;
-  border-radius: 20px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  font-size: 0.9rem;
-  opacity: 0;
-  transition: opacity 0.3s;
-  pointer-events: none;
-}
-
-.mascot-container:hover .speech-bubble {
-  opacity: 1;
 }
 
 .mascot-bubble {
@@ -315,11 +161,22 @@ footer {
   z-index: 10;
 }
 
-.talking {
-  animation: mascotTalk 0.5s ease;
+/* Scroll to Top Button */
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 999;
 }
 
-@keyframes mascotTalk {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
+#scrollToTopBtn:hover {
+  background-color: var(--accent-color);
 }
