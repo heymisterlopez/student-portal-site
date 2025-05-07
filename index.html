@@ -4,22 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Welcome to MySite!</title>
-  <link rel="stylesheet" href="variables.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body id="top">
   <header>
+    <div class="logo">
+      <img src="images/mascot.png" alt="Site Mascot" />
+      <span>MySite</span>
+    </div>
     <nav>
-      <div class="logo">
-        <img src="images/mascot.png" alt="Site Mascot" />
-        MySite
-      </div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="students.html">Students</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <a href="#">Home</a>
+      <a href="#">Students</a>
+      <a href="#">Resources</a>
+      <a href="#">Contact</a>
       <label class="theme-toggle">
         <input type="checkbox" id="themeToggle" />
         <span class="slider"></span>
@@ -30,29 +27,29 @@
   <section class="hero">
     <h1>Welcome to Our Classroom Hub!</h1>
     <p>Learn. Explore. Create. Let’s have fun while growing our brains 🧠✨</p>
-    <a href="students.html" class="button">Explore Student Tools</a>
+    <a href="#" class="button">Explore Student Tools</a>
   </section>
 
   <section class="card-section">
-    <div class="card">
-      <h2>🧠 Learning Portal</h2>
-      <p>Jump into reading, math, science, art and more!</p>
-      <a href="resources.html">Go to Resources</a>
+    <div class="card post-it peach">
+      <h2>Reading Tools</h2>
+      <p>Improve your reading skills with top resources!</p>
+      <a href="#">Visit Epic!</a>
     </div>
-    <div class="card">
-      <h2>📆 Weekly Schedule</h2>
-      <p>Find out what’s happening each day in class.</p>
-      <a href="schedule.html">View Schedule</a>
+    <div class="card post-it yellow">
+      <h2>Math Websites</h2>
+      <p>Fun math games and practice sites!</p>
+      <a href="#">Visit Math Playground</a>
     </div>
-    <div class="card">
-      <h2>📰 Newsletter</h2>
-      <p>Check out our latest class announcements and news!</p>
-      <a href="announcements.html">Read More</a>
+    <div class="card post-it green">
+      <h2>Science Projects</h2>
+      <p>Exciting experiments and science facts!</p>
+      <a href="#">See Projects</a>
     </div>
-    <div class="card">
-      <h2>📬 Contact the Teacher</h2>
-      <p>Have a question? Send a message!</p>
-      <a href="contact.html">Get in Touch</a>
+    <div class="card post-it blue">
+      <h2>Art Activities</h2>
+      <p>Creative activities to unleash your inner artist!</p>
+      <a href="#">Create Art</a>
     </div>
   </section>
 
@@ -65,10 +62,8 @@
   </footer>
 
   <div class="mascot-container">
-    <img id="mascot" src="images/mascot1.png" alt="Mascot Assistant" class="character-float" />
-    <img id="mascot-eyes" src="images/mascot-eyes.png" alt="Mascot Eyes" class="mascot-eyes" />
+    <img id="mascot" src="images/mascot1.png" alt="Mascot Assistant" class="character-static" />
     <div id="mascotTip" class="mascot-bubble">Hi there! Ready to learn something fun today?</div>
-    <div class="speech-bubble" id="speechBubble">Hi there! Need help?</div>
   </div>
 
   <button id="scrollToTopBtn" title="Go to top">⬆️</button>
