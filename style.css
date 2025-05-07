@@ -32,6 +32,21 @@ html, body {
   overflow-x: hidden;
 }
 
+/* Page wrapper ensures footer sticks to bottom */
+body, html {
+  height: 100%;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+}
+
 /* Add space below fixed header */
 main {
   padding-top: 100px;
@@ -145,7 +160,7 @@ nav a:hover {
 .card h2 {
   font-size: 1.3rem;
   margin-bottom: 10px;
-  color: #7b5cff;
+  color: #8d6aff;
 }
 
 .card a {
@@ -156,6 +171,12 @@ nav a:hover {
 
 .card a:hover {
   color: var(--accent-color);
+}
+
+.card p {
+  color: #444444; /* dark gray for better contrast */
+  margin-top: 0;
+  margin-bottom: 0.8rem;
 }
 
 a:focus {
