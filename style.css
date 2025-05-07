@@ -21,23 +21,35 @@ body.dark-mode {
   --footer-color: #3c8d95;
 }
 
-body {
+html, body {
+  margin: 0;
+  padding: 0;
   font-family: 'Quicksand', sans-serif;
-  background: linear-gradient(180deg, #0f0f0f, #1a1a1a, #2a2a2a);
+  background-color: #1c1c1c;
   color: #f4f4f4;
-  transition: background-color 0.3s ease, color 0.3s ease;
   line-height: 1.6;
-  padding-top: 70px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+/* Add space below fixed header */
+main {
+  padding-top: 100px;
 }
 
 /* Header */
 header {
-  background-color: #1a1a1a;
-  color: #ffffff;
-  padding: 15px 20px;
+  background-color: #121212;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 16px 32px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
 }
 
 .logo {
@@ -45,17 +57,25 @@ header {
   align-items: center;
   font-weight: bold;
   gap: 10px;
+  color: white;
 }
 
 .logo img {
   width: 40px;
+  height: 40px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
 }
 
 nav a {
-  margin-left: 20px;
   text-decoration: none;
   color: white;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 nav a:hover {
@@ -64,10 +84,10 @@ nav a:hover {
 
 /* Hero */
 .hero {
+  padding: 80px 20px 40px;
+  background: linear-gradient(to bottom, #2a2a2a, #1c1c1c);
   text-align: center;
-  padding: 80px 20px;
-  background-color: #ead5a6;
-  color: var(--primary-color);
+  color: #f0e6ff;
 }
 
 .hero h1 {
@@ -81,16 +101,19 @@ nav a:hover {
 }
 
 .button {
-  padding: 12px 25px;
+  padding: 14px 30px;
   background-color: var(--accent-color);
   color: white;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 8px;
+  box-shadow: 2px 4px 10px rgba(0,0,0,0.3);
+  transition: all 0.2s ease-in-out;
 }
 
 .button:hover {
   background-color: var(--primary-color);
+  transform: scale(1.05);
 }
 
 /* Cards */
@@ -99,41 +122,45 @@ nav a:hover {
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  padding: 40px 20px;
-  background-color: var(--bg-color);
+  padding: 50px 20px;
+  background-color: transparent;
 }
 
 .card {
-  background: #2f2f2f;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 1.5rem;
   width: 260px;
-  color: #f4f4f4;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  font-size: 1rem;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
 }
 
 .card:hover {
-  border-color: #b28dff;
-  box-shadow: 0 0 15px rgba(178, 141, 255, 0.3);
-  transform: scale(1.03);
+  transform: translateY(-6px);
+  box-shadow: 6px 6px 20px rgba(0,0,0,0.2);
+  filter: brightness(1.03);
 }
 
 .card h2 {
+  font-size: 1.3rem;
   margin-bottom: 10px;
+  color: #7b5cff;
 }
 
 .card a {
-  display: inline-block;
-  margin-top: 10px;
-  text-decoration: none;
   font-weight: bold;
-  color: var(--primary-color);
+  text-decoration: none;
+  color: var(--text-color);
 }
 
 .card a:hover {
   color: var(--accent-color);
+}
+
+a:focus {
+  outline: 2px dashed var(--accent-color);
+  outline-offset: 3px;
 }
 
 .peach { background-color: var(--post-it-peach); }
@@ -144,8 +171,25 @@ nav a:hover {
 /* Footer */
 footer {
   text-align: center;
-  background-color: #1a1a1a;
+  background-color: #2E073F;
   color: #ffffff;
   padding: 15px 10px;
   font-size: 14px;
+}
+
+/* Responsive Nav Support */
+@media (max-width: 600px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  nav a {
+    font-size: 14px;
+    margin-left: 12px;
+  }
+
+  .logo {
+    font-size: 14px;
+  }
 }
