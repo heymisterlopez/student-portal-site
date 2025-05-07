@@ -22,18 +22,18 @@ body.dark-mode {
 }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: 'Quicksand', sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: background-color 0.3s, color 0.3s;
+  background: linear-gradient(180deg, #0f0f0f, #1a1a1a, #2a2a2a);
+  color: #f4f4f4;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.6;
+  padding-top: 70px;
 }
 
 /* Header */
 header {
-  background-color: var(--primary-color);
-  color: white;
+  background-color: #1a1a1a;
+  color: #ffffff;
   padding: 15px 20px;
   display: flex;
   justify-content: space-between;
@@ -145,15 +145,19 @@ input:checked + .slider:before {
 }
 
 .card {
+  background: #2f2f2f;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 1.5rem;
   width: 260px;
-  padding: 20px;
-  border-radius: 6px;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: transform 0.3s ease;
+  color: #f4f4f4;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
+  border-color: #b28dff;
+  box-shadow: 0 0 15px rgba(178, 141, 255, 0.3);
   transform: scale(1.03);
 }
 
@@ -181,8 +185,8 @@ input:checked + .slider:before {
 /* Footer */
 footer {
   text-align: center;
-  background-color: var(--footer-color);
-  color: white;
+  background-color: #1a1a1a;
+  color: #ffffff;
   padding: 15px 10px;
   font-size: 14px;
 }
