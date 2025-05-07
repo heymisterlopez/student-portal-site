@@ -117,6 +117,7 @@ nav a:hover {
 .card:hover {
   border-color: #b28dff;
   box-shadow: 0 0 15px rgba(178, 141, 255, 0.3);
+  transform: scale(1.03);
 }
 
 .card h2 {
@@ -147,20 +148,4 @@ footer {
   color: #ffffff;
   padding: 15px 10px;
   font-size: 14px;
-}
-
-/* Scroll Button */
-#scrollToTopBtn {
-  display: none;
-  position: fixed;
-  bottom: 80px;
-  right: 20px;
-  background-color: var(--accent-color);
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  font-size: 18px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 50;
 }
